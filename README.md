@@ -1,75 +1,103 @@
-# React + TypeScript + Vite
+Com base no modelo que você enviou e nas informações do PDF do projeto Paraprolim, aqui está um `README.md` sucinto e padronizado:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```markdown
+# Projeto Paraprolim
 
-Currently, two official plugins are available:
+**CEFET/RJ – Nova Friburgo**
+**Bacharelado em Sistemas de Informação**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+_Projeto Paraprolim, desenvolvido para [inserir disciplina/semestre]._
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 👨‍💻 Desenvolvedores
 
-Note: This will impact Vite dev & build performances.
+- [Gabriel Guerço](https://github.com/Guerco)
+- [Inserir outros nomes aqui, se houver]
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🌐 Tecnologias utilizadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Frontend 🎨
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**🔧 Linguagens e Ferramentas:**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- HTML
+- CSS
+- TypeScript
+- React
+- Vite
+- PNPM
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**📚 Bibliotecas e Frameworks TypeScript:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React Router
+- TanStack Query
+- Material UI (se for usar, ou remova se não)
+- oxlint
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+*(Ajuste essa lista de bibliotecas conforme o `package.json` final do seu projeto)*
+
+---
+
+### Backend 🛠️
+
+**🔧 Linguagens e Ferramentas:**
+
+- PHP
+- Laravel (conforme as migrations e o ambiente enviados)
+- Composer
+
+---
+
+## Primeiros Passos 🏃‍♂️
+
+Para rodar o projeto localmente:
+
+1. Instale as dependências do frontend:
+   ```bash
+   pnpm install
+   ```
+2. Rode o servidor de desenvolvimento:
+   ```bash
+   pnpm dev
+   ```
+3. Certifique-se de que o backend (Laravel) esteja rodando na porta `8000` para o proxy funcionar.
+
+---
+
+## Estrutura de Diretórios 🗃
+
+| **📂**                                       | **Descrição**                                           |
+| -------------------------------------------- | ------------------------------------------------------- |
+| [/api/](./api/)                              | Implementação da API (Backend)                          |
+| [/frontend/](./frontend/)                    | Implementação do frontend                               |
+| 🛠️**Estrutura da API**                       |                                                         |
+| [/database/migrations/](./api/database/migrations/) | Migrations do banco de dados                     |
+| [/src/](./api/src/)                          | Código-fonte da API                                     |
+| 🎨**Estrutura do Frontend**                  |                                                         |
+| [/src/](./frontend/src/)                     | Código-fonte do frontend                                |
+| [/src/api/](./frontend/src/api/)             | Configuração HTTP, rotas e interceptores                |
+| [/src/components/](./frontend/src/components/) | Componentes reutilizáveis (separados por entidade)    |
+| [/src/hooks/](./frontend/src/hooks/)         | Hooks customizados                                      |
+| [/src/pages/](./frontend/src/pages/)         | Páginas da aplicação                                    |
+| [/src/services/](./frontend/src/services/)   | Serviços de chamadas à API                              |
+| [/src/types/](./frontend/src/types/)         | Definições de tipos TypeScript                          |
+| [/src/utils/](./frontend/src/utils/)         | Funções utilitárias (formatadores, etc.)                |
+
+---
+
+## Documentação da API 🧩
+
+*(Se houver um arquivo de documentação da API, link aqui)*
+
+---
+
+## Comandos disponíveis:
+
+- `pnpm install` - Instala as dependências
+- `pnpm dev` - Roda o frontend em ambiente de desenvolvimento
+- `pnpm build` - Gera o build de produção
+- `pnpm lint` - Verifica a qualidade do código com oxlint
 ```
