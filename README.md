@@ -1,75 +1,82 @@
-# React + TypeScript + Vite
+# Sistema Locadora
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**CEFET/RJ – Nova Friburgo**
+**Bacharelado em Sistemas de Informação**
 
-Currently, two official plugins are available:
+_Sistema de Locadora, desenvolvido em react._
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Demonstração do Sistema](./locadora.gif)
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🌐 Tecnologias utilizadas
 
-Note: This will impact Vite dev & build performances.
+### Frontend 🎨
 
-## Expanding the ESLint configuration
+**🔧 Linguagens e Ferramentas:**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- HTML
+- CSS
+- TypeScript
+- React
+- Vite
+- npm
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**📚 Bibliotecas e Frameworks TypeScript:**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Material UI (MUI)
+- React Router DOM
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Primeiros Passos 🏃‍♂️
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Para rodar o projeto localmente:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+2. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## Estrutura de Diretórios 🗃
+
+| **📂**                                       | **Descrição**                                           |
+| -------------------------------------------- | ------------------------------------------------------- |
+| [/src/](./src/)                              | Código-fonte do frontend                                |
+| 🎨**Estrutura do Frontend**                  |                                                         |
+| [/src/components/](./src/components/)        | Componentes reutilizáveis divididos por entidade        |
+| [/src/pages/](./src/pages/)                  | Páginas completas da aplicação                          |
+| [/src/types/](./src/types/)                  | Definições de tipos TypeScript                          |
+| [/src/App.tsx](./src/App.tsx)                | Componente principal com rotas e menu lateral           |
+| [/src/App.css](./src/App.css)                | Estilos globais                                         |
+| [/src/main.tsx](./src/main.tsx)              | Ponto de entrada da aplicação                           |
+
+---
+
+## 📝 Descrição do Negócio
+
+O Sistema de Locadora é uma aplicação web para gerenciar as operações de uma locadora de filmes. Permite o cadastro e gerenciamento de filmes, gêneros, diretores, clientes e cópias físicas, além de controlar o aluguel e devolução.
+
+---
+
+## ⚙️ Funcionalidades (CRUDs)
+
+1. **Gêneros**: ID e Descrição.
+2. **Diretores**: ID, Nome e Nacionalidade.
+3. **Clientes**: ID, Nome, CPF e Data de Nascimento.
+4. **Filmes**: ID, Título, Gênero e Diretor.
+5. **Cópias**: ID, Código, Alugado (boolean) e Filme.
+6. **Aluguel**: Controle de empréstimo e devolução de cópias.
+
+---
+
+## Comandos disponíveis:
+
+- `npm install` - Instala as dependências
+- `npm run dev` - Roda o frontend em ambiente de desenvolvimento
